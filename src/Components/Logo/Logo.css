@@ -1,0 +1,75 @@
+.logo__div{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    width: fit-content;
+    max-height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: baseline;
+    transform: translateX(-8px);
+}
+
+#logo-lottie__div{
+    height: 87px;
+    transform: translateY(22px);
+}
+
+.logo__alphabets{
+    font-weight: 700;
+    font-size: 5rem;
+    color: #fff;
+    -webkit-box-reflect: below 10px linear-gradient(transparent , #0008);
+    line-height: 0.70em;
+    outline: none;
+    margin-right: 3px;
+    cursor: default;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.no-reflection{
+    -webkit-box-reflect: below 10px linear-gradient(transparent , transparent) !important;
+    font-size: 5rem !important;
+}
+
+#alphabet_1{
+    text-shadow: -4px 0 0 white;
+    font-size: 7rem;
+}
+
+.logo-div-text__onhover{
+    animation : animateText 1s ease-in-out;
+}
+
+#alphabet_4, #alphabet_6{
+    margin-left: -8px;
+}
+
+@keyframes animateText {
+    0%{
+        transform: scale3d(1,1,1);
+    }
+    30%{
+        transform: scale3d(1.25,.75,1);
+    }
+    40%{
+        transform: scale3d(.75,1.25,1);
+    }
+    50%{
+        transform: scale3d(1.15,.85,1);
+    }
+    65%{
+        transform: scale3d(.95,1.05,1);
+    }
+    75%{
+        transform: scale3d(1.05,.95,1);
+    }
+    100%{
+        transform: scale3d(1,1,1);
+    }
+}
+
+@media(max-width : 600px){
+    .visibility-hidden__logo{
+        display: none !important;
+    }
+}

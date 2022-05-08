@@ -1,0 +1,87 @@
+.type-of-gifs__div{
+    color: white;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    max-width: 90rem;
+    font-family: 'Barlow Condensed';
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.type-of-gifs__text{
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    background-color: #00000058;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 7;
+}
+
+
+.gifs__full-div{
+    margin: 0 auto 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 90rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: repeat(auto-fit, min-content);
+    column-gap: 1px;
+    row-gap: 1px;
+    overflow-x: hidden;
+    justify-items: baseline;
+    border-radius: 10px;
+}
+
+.gif__div{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    min-height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: auto 100% !important;
+    background-position-x: 0;
+    background-position-y: 0;
+    border: 2px solid #9833FE;
+    position: relative;
+    overflow: hidden;
+}
+
+.blurred__div{
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(5px);
+}
+
+.images{
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-of-page__div{
+    margin: 30px 0;
+    width: 100%;
+    height: fit-content;
+}

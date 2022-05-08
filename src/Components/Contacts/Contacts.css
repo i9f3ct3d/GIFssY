@@ -1,0 +1,25 @@
+.contact__full-div{
+    height: fit-content;
+    /* min-height: 8rem; */
+    width: fit-content;
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(6, 101, 6);
+    border: 1px solid green;
+    border-right: none;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 5px 12px;
+}
+
+.contact__icons{
+    color: rgb(103, 159, 103);
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-shadow: inset 2px 2px 4px black;
+    cursor: pointer;
+}
