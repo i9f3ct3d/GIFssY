@@ -12,14 +12,12 @@ import axios from "axios";
 import Loader from "../Loader/Loader";
 import { IoTrendingUpOutline } from 'react-icons/io5'
 import { BiSearch } from 'react-icons/bi'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import NoData from "./components/NoData";
 import Error from "../Error/Error";
+import GIFCards from "../GIFCards/GIFCards";
 
-const colors = ["#9833FE", "#01FE99", "#FF6767", "#FFF35B"];
-
-const Gifssy = ({}, ref) => {
+const Gifssy = ({showToast}, ref) => {
   const [data, setData] = useState([]);
   const [hasMoreData, setHasMoreData] = useState(true);
 
@@ -233,24 +231,11 @@ const Gifssy = ({}, ref) => {
             data.length > 0 &&
             data.map((e, index) => {
               return (
-                <div
-                  key={index}
-                  style={{
-                    borderColor: colors[Math.floor((Math.random() * 100) % 4)],
-                    background: `url(${e.images.original_still.url}) no-repeat`,
-
-                  }}
-                  className="gif__div"
-                >
-                  <div className="blurred__div"></div>
-                  <LazyLoadImage
-                    alt="gif"
-                    width='100%'
-                    className="images"
-                    src={e.images.fixed_width.url}
-                    effect='blur'
-                  />
-                </div>
+                <GIFCards
+                  showToast = {showToast}
+                  gif = {e}
+                  key = {index}
+                />
               );
             })}
         </Suspense>

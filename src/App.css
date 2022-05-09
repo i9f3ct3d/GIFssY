@@ -47,11 +47,12 @@
   align-items: flex-end;
   padding-bottom: 10px;
   box-shadow: 0 4px 10px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #323332;
 }
 
 @media(max-width : 600px){
   .float__wrapper-div{
-    height: 58px !important;
+    height: 60px !important;
     grid-template-columns : 0 minmax(320px, 1fr);
     column-gap: 0;
     align-items: flex-start !important;

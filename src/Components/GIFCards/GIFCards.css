@@ -1,0 +1,109 @@
+.gif__div {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    min-height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: auto 100% !important;
+    background-position-x: 0;
+    background-position-y: 0;
+    border: 2px solid #9833fe;
+    position: relative;
+    overflow: hidden;
+}
+
+.blurred__div {
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(5px);
+}
+
+.images {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-user__avatar-div {
+    height: fit-content;
+    width: fit-content;
+    max-width: 100%;
+    font-family: "Barlow Condensed";
+    color: white;
+    font-weight: 500;
+    position: absolute;
+    left: -4rem;
+    bottom: -4rem;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: bottom 200ms ease-in-out, left 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.gif__div:hover .gif-user__avatar-div {
+    left: 4px;
+    bottom: 4px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.avatar__image {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+}
+
+.gif-user__username {
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.gif-link__div {
+    position: absolute;
+    right: -4rem;
+    top: -4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    transition: top 200ms ease-in-out, right 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.gif__div:hover .gif-link__div {
+    right: 4px;
+    top: 4px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.hover-blurred__div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 143%;
+    height: 143%;
+    background: radial-gradient(circle, transparent 70% , rgba(0, 0, 0, 0.8));
+    transition: height 200ms ease-in-out, width 200ms ease-in-out;
+}
+
+.gif__div:hover .hover-blurred__div{
+    height: 100%;
+    width: 100%;
+}
